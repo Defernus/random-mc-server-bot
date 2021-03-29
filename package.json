@@ -1,0 +1,25 @@
+{
+  "name": "minecraft-finder",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.ts",
+  "scripts": {
+    "dev": "nodemon ./index.ts",
+    "build": "tsc --outDir dist ./index.ts",
+    "start": "node dist/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^14.14.37",
+    "nodemon": "^2.0.7",
+    "ts-node": "^9.1.1",
+    "typescript": "^4.2.3"
+  },
+  "dependencies": {
+    "is-port-reachable": "^3.0.0",
+    "minecraft-server-status": "^1.0.1",
+    "node-telegram-bot-api": "^0.51.0"
+  }
+}
