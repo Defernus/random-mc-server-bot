@@ -4,6 +4,9 @@ const TelegramBot = require('node-telegram-bot-api');
 
 const token = process.env.TG_TOKEN;
 const channel = process.env.TG_CHANNEL;
+const ipsPerSecond = process.env.IPS_PER_SECOND || 1000;
+
+
 const bot = new TelegramBot(token, {});
 
 const formatModt = (m: string) => m.replace(/§\w/g, "")
@@ -34,12 +37,11 @@ const checkRandomIp = async () => {
   }
 }
 
-const IPS_PER_TIME = 1000;
 
 (async () => {
   for (;;) {
     const results = [];
-    for (let i = 0; i != IPS_PER_TIME; ++i) {
+    for (let i = 0; i != ipsPerSecond; ++i) {
         results.push(checkRandomIp());
     }
     await Promise.all(results);
