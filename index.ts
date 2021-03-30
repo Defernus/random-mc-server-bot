@@ -32,7 +32,7 @@ const checkRandomIp = async () => {
 
   if (isOpen) {
     mcStat(ip, 25565, (serverData) => {
-      if (serverData.online) sendMessage(ip, serverData);
+      if (serverData?.online) sendMessage(ip, serverData);
     });
   }
 }
