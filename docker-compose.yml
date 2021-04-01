@@ -1,9 +1,9 @@
 version: "3.7"
 
 services:
-  bot:
+  scanner:
     restart: "always"
-    build: .
+    build: ./scanner
     environment:
       - TG_TOKEN=${TG_TOKEN}
       - TG_CHANNEL=${TG_CHANNEL}

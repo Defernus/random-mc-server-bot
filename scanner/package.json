@@ -1,5 +1,5 @@
 {
-  "name": "minecraft-finder",
+  "name": "scanner",
   "version": "1.0.0",
   "description": "",
   "main": "index.ts",
@@ -19,7 +19,6 @@
   },
   "dependencies": {
     "is-port-reachable": "^3.0.0",
-    "minecraft-server-status": "^1.0.1",
-    "node-telegram-bot-api": "^0.51.0"
+    "minecraft-server-status": "^1.0.1"
   }
 }
